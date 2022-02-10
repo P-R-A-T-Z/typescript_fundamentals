@@ -3,18 +3,18 @@ package com.springboot.crud_demo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstname;
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastname;
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
     //Generate Constructors
@@ -26,6 +26,7 @@ public class Employee {
         this.lastname = lastname;
         this.email = email;
     }
+
     //Generate Getter/Setters
     public int getId() {
         return id;

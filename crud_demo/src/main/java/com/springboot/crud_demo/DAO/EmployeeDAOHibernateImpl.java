@@ -47,7 +47,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
     @Override
     public void deleteByID(int id) {
         Session currentSession = entitymanager.unwrap(Session.class);
-        currentSession.delete("delete from Employee where id="+id);
+        currentSession.delete("delete from Employee where id=" + id);
 
     }
 }

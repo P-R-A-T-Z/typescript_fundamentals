@@ -9,13 +9,13 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeDAO employeeDAO;
 
     @Autowired
-    public void EmployeeServiceImpl(EmployeeDAO employeedao){
-        this.employeeDAO=employeedao;
+    public void EmployeeServiceImpl(EmployeeDAO employeedao) {
+        this.employeeDAO = employeedao;
     }
 
     @Override
@@ -33,12 +33,12 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     @Transactional
     public void save(Employee employee) {
-    employeeDAO.save(employee);
+        employeeDAO.save(employee);
     }
 
     @Override
     @Transactional
     public void deleteByID(int id) {
-    employeeDAO.deleteByID(id);
+        employeeDAO.deleteByID(id);
     }
 }

@@ -18,12 +18,13 @@ public class EmployeeRestController {
 
     //Inject Employee DAO
     @Autowired
-    public EmployeeRestController(EmployeeService employeeservice)
-    { this.employeeservice=employeeservice; }
+    public EmployeeRestController(EmployeeService employeeservice) {
+        this.employeeservice = employeeservice;
+    }
 
     //Return List of Employee
     @GetMapping("/employees")
-    public List<Employee> findAll(){
+    public List<Employee> findAll() {
         return employeeservice.findAll();
 
     }
